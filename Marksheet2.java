@@ -1,20 +1,20 @@
 //Program to print a mark sheet.
 import java.util.Scanner;
-public class Marksheet
+public class Marksheet2
 {
-    public static void main()
+      float average=0;
+      int totalper=0,total=0,got=0,n;
+      char grdtotal='X';
+      int[] f = new int[n];
+      int[] g = new int[n];
+      int[] per = new int[n];
+      char[] grd = new char[n];
+      int i=0;
+    Marksheet2()
     {
         Scanner sc = new Scanner(System.in);
-        float average=0;
-        int totalper=0,total=0,got=0;
-        char grdtotal='X';
         System.out.println("Enter number of tests: ");
         int n=sc.nextInt();
-        int[] f = new int[n];
-        int[] g = new int[n];
-        int[] per = new int[n];
-        char[] grd = new char[n];
-        int i=0;
         for(int j=1;i<n;i++,j++)
         {
             System.out.println("Enter full marks in test "+j+" : ");
@@ -25,11 +25,17 @@ public class Marksheet
             got=got+g[i]; 
             (per[i])=((g[i]*100)/f[i]);
         }
+    }
+    void gap()
+    {
         for(int l=1;l<=15;l++)
         {
             System.out.println("-\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t-");
             System.out.println("/\t\t\t\t\t\t\t\t-\t\t\t\t\t\t\t\t/");
         }
+    }
+    void calculate()
+    {
         average=got/3;
         totalper=((got*100)/total);
         i=0;
@@ -38,6 +44,9 @@ public class Marksheet
             grd[i]=(per[i]>=90)?'A':(per[i]>=70)?'B':(per[i]>=50)?'C':'D';
         }
         grdtotal=(totalper>=90)?'A':(totalper>=70)?'B':(totalper>=50)?'C':'D';
+    }
+    void output()
+    {
         System.out.println("\tExamination");
         int y=1;i=0;
         while(y<=n && i<n)
@@ -50,5 +59,12 @@ public class Marksheet
         System.out.println("Marks got in total -> "+got+"/"+total);
         System.out.println("Total Percentage -> "+totalper);
         System.out.println("Total Grade -> "+grdtotal);
+    }
+    void main()
+    {
+        Marksheet2 obj=new Marksheet2();
+        obj.gap();
+        obj.calculate();
+        obj.output();
     }
 }
