@@ -1,4 +1,4 @@
-//Program to print a mark sheet. Made By: Sayan Biswas(BUGGED)--------DEBUG : Ankan Pal
+//Program to print a mark sheet. Made By: Sayan Biswas(BUGGED) -------- DEBUG : Ankan Pal
 import java.util.Scanner;
 public class Marksheet
 {
