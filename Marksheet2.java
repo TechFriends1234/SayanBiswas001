@@ -28,13 +28,9 @@ public class Marksheet2
             got=got+g[i]; 
             (per[i])=((g[i]*100)/f[i]);
         }
-
-        calculate();
-
         gap();
         calculate();
         output();
-
     }
     void gap()
     {

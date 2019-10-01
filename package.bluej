@@ -1,8 +1,8 @@
 #BlueJ package file
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=275
-editor.fx.0.y=-4
+editor.fx.0.height=744
+editor.fx.0.width=1382
+editor.fx.0.x=-8
+editor.fx.0.y=-8
 objectbench.height=87
 objectbench.width=801
 package.divider.horizontal=0.600297176820208
@@ -49,8 +49,8 @@ target12.name=Marksheet2
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=100
-target12.x=910
-target12.y=450
+target12.x=580
+target12.y=340
 target13.height=50
 target13.name=Marksheet3
 target13.showInterface=false
