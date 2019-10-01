@@ -1,6 +1,5 @@
-//Program to print a mark sheet.
 import java.util.Scanner;
-public class Marksheet2
+public class Marksheet3
 {
       float average=0;
       int totalper=0,total=0,got=0,n;
@@ -10,7 +9,7 @@ public class Marksheet2
       int[] per = new int[n];
       char[] grd = new char[n];
       int i=0;
-    Marksheet2()
+    Marksheet3()
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of tests: ");
@@ -28,7 +27,9 @@ public class Marksheet2
             got=got+g[i]; 
             (per[i])=((g[i]*100)/f[i]);
         }
+        gap();
         calculate();
+        output();
     }
     void gap()
     {
@@ -66,9 +67,6 @@ public class Marksheet2
     }
     void main()
     {
-        Marksheet2 obj=new Marksheet2();
-        obj.gap();
-        obj.calculate();
-        obj.output();
+        Marksheet3 obj=new Marksheet3();
     }
 }
