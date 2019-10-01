@@ -1,4 +1,4 @@
-//Program to print a mark sheet.
+//Program to print a mark sheet. Made By: Sayan Biswas(BUGGED) -------- DEBUG : Ankan Pal
 import java.util.Scanner;
 public class Marksheet
 {
@@ -22,16 +22,16 @@ public class Marksheet
             System.out.println("Enter marks got in test "+j+" : ");
             g[i]=sc.nextInt();
             total=total+f[i];
-            got=got+g[i]; 
+            got=got+(g[i]);
             (per[i])=((g[i]*100)/f[i]);
         }
-        for(int l=1;l<=15;l++)
+        for(int z=1;z<=15;z++)
         {
             System.out.println("-\t\t\t\t\t\t\t\t/\t\t\t\t\t\t\t\t-");
             System.out.println("/\t\t\t\t\t\t\t\t-\t\t\t\t\t\t\t\t/");
         }
         average=got/3;
-        totalper=((got*100)/total);
+        totalper=(got*100/total);
         i=0;
         for(int x=0;x<n;x++,i++)
         {
