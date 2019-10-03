@@ -1,6 +1,6 @@
 public class Design2
 {
-    public static void main(String args[])
+    public static void main()
     {
         int i=25,j=1;
         String p = new String(new char[i]).replace("\0"," ");

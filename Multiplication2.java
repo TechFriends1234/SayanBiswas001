@@ -1,7 +1,7 @@
 /*Program to show the step-wise multiplication of 2 numbers.
 This program is best with two 2-digit numbers.*/
 import java.util.Scanner;//Importing Scanner class
-public class Multiplication//Declaring class
+public class Multiplication2//Declaring class
 {
     public static void main()//Declaring method main
     {
@@ -19,22 +19,17 @@ public class Multiplication//Declaring class
         g=(10*c+d)*f;
         h=(10*c+d)*e;
         h=h*10;
-        if(h>999)
-        {
-            System.out.println("   0" + g);
-            System.out.println(" + " + h);
+        String s="   ",s2=" ";
+        if(h>999) s=s+" ";
+        else if(h>99) s=s+"  ";
+        else s=s+"   ";
+        if(h>99) s2=s2+" ";
+        else s2=s2+"  ";
+        System.out.println(s + g);
+            System.out.println(" +" + s2 + h);
             System.out.println("--------");
             i=g+h;
             System.out.println("   " + i);
-        }
-        else
-        {
-            System.out.println("   " + g);
-            System.out.println(" + " + h);
-            System.out.println("--------");
-            i=g+h;
-            System.out.println("   " + i);
-        }
         System.out.println("--------");
     }
 }

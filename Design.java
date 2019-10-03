@@ -1,6 +1,6 @@
 public class Design
 {
-    public static void main(String args[])
+    public static void main()
     {
         int i=25,j=1;
         for(char ch='a';ch<='z';ch++)
