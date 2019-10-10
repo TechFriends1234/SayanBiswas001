@@ -19,7 +19,8 @@ public class Password_Check
             System.out.println("Try number: "+i+"\nEnter your first name: ");
             String first=sc.next();
             q1=(first=="SAYAN")?true:false;
-            if(q1==true)break;
+            if(q1==true)
+            break;
             if(i==3)
             {
                 System.out.println("You have crossed the number of trials! Access denied! ");
@@ -34,11 +35,9 @@ public class Password_Check
         {
             System.out.println("Try number: "+i+"\nEnter your last name: ");
             String last=sc.next();
-            if(last=="BISWAS")
-            {
-                q2=true;
-                break;
-            }
+            q1=(last=="BISWAS")?true:false;
+            if(q1==true)
+            break;
             if(i==3)
             {
                 System.out.println("You have crossed the number of trials! Access denied! ");
