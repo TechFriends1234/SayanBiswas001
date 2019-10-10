@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
 public class Password_Check
 {
     Scanner sc = new Scanner(System.in);
-    boolean q1,q2,q3,a1,a2,a3;
+    boolean q1,q2,a1,a2;
     public void main()
     {
         System.out.println("Welcome! \n First let's verify it's you.");
@@ -18,7 +18,7 @@ public class Password_Check
         {
             System.out.println("Try number: "+i+"\nEnter your first name: ");
             String first=sc.next();
-            q1=((String)first=="SAYAN")?true:false;
+            q1=(first=="SAYAN")?true:false;
             if(q1==true)break;
             if(i==3)
             {
