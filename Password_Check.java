@@ -18,7 +18,7 @@ public class Password_Check
         {
             System.out.println("Try number: "+i+"\nEnter your first name: ");
             String first=sc.next();
-            q1=((String)first=="SAYAN")?true:false;
+            q1=(first=="SAYAN")?true:false;
             if(q1==true)break;
             if(i==3)
             {
