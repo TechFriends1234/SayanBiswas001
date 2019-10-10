@@ -1,5 +1,4 @@
 //Program to Check First Name and Last Name
-//Created by Sayan Biswas (DEBUG: ANKAN PAL)
 import java.util.Scanner;
 public class Password_Check
 {
@@ -20,7 +19,7 @@ for(int i=1;i<4;i++)
 {
 System.out.println("\n\nFirst Name Tries: "+i+"\n\nEnter your first name: ");
 String first=sc.next();
-q1=(first.equals("ANKAN"))?true:false;
+q1=(first.equals("SAYAN"))?true:false;
 if(q1==true)
 {
     a1=true;
@@ -41,7 +40,7 @@ for(int i=1;i<4;i++)
 {
 System.out.println("\n\n\nLast Name Tries: "+i+"\n\n\nEnter your last name: ");
 String last=sc.next();
-q2=(last.equals("PAL"))?true:false;
+q2=(last.equals("BISWAS"))?true:false;
 if(q2==true)
 {
 a2=true;
