@@ -1,16 +1,9 @@
 //Program to subtract two numbers.
-import java.util.Scanner;
-public class Difference
+public class Difference 
 {
-    public static void sum()
+    public static double subtract(double a,double b)
     {
-        int a,b,c;
-        System.out.println("Enter a number: ");
-        Scanner sc = new Scanner(System.in);
-        a=sc.nextInt();
-        System.out.println("Enter another number: ");
-        b=sc.nextInt();
-        c=a-b;
-        System.out.println("Difference is "+c);
+        double c=a-b;
+        return c;
     }
 }

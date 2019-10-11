@@ -1,16 +1,9 @@
 //Program to divide two numbers.
-import java.util.Scanner;
 public class Division
 {
-    public static void sum()
+    public static double divide(double a,double b)
     {
-        int a,b,c;
-        System.out.println("Enter a number: ");
-        Scanner sc = new Scanner(System.in);
-        a=sc.nextInt();
-        System.out.println("Enter another number: ");
-        b=sc.nextInt();
-        c=a/b;
-        System.out.println("Sum is "+c);
+        double c=a/b;
+        return c;
     }
 }
