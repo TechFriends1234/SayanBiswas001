@@ -15,8 +15,8 @@ public class Compound_Interest
        float n= sc.nextFloat();
        System.out.println("Enter 1 for compounding annually, 2 for compounding half-yearly and 3 for compounding quarterly: ");
        int a= sc.nextInt();
-        switch (a)
-        {
+       switch (a)
+       {
             case 1: b=Math.pow((1+(r/100)),n);
                     ci=(p*b)-p;
                     System.out.println("Compound interest is " + ci);

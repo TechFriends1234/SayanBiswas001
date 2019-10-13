@@ -1,4 +1,4 @@
-public class Prime2
+public class Blank
 {
     public static void main(int n)
     {

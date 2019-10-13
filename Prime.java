@@ -4,9 +4,6 @@ public class Prime
 {
     public static void pr(int n)
     {
-        //Scanner sc = new Scanner(System.in);
-        //System.out.println("Enter the value upto which you want the prime numbers: ");
-        //int n=sc.nextInt();
         int i, k=1;
         if(n>=2)
         {
@@ -28,7 +25,7 @@ public class Prime
             System.out.println("");
         }
         else
-        System.out.println("Prime factors of " + n + " are: 2 3 5 ...");
+        System.out.println("Prime factor of " + n + " are: 2 3 5 ...");
     }
     public static void pr2(int n)
     {
@@ -50,21 +47,21 @@ public class Prime
                    j++;l++;
                }
                k++;
-       }
-       System.out.println("Number of prime factors: "+j);
-       int m=2;
-       while(m<n)
-       {
-           if(n%m==0) 
-           {
-               System.out.println("Number is composite.");
-               break;
            }
-           m++;
-       }
-       if(m==n) 
-       System.out.println("Number is prime.");
-       System.out.println("Sum of prime factors: "+l);
+           System.out.println("Number of prime factors: "+j);
+           int m=2;
+           while(m<n)
+           {
+               if(n%m==0) 
+               {
+                   System.out.println("Number is composite.");
+                   break;
+               }
+               m++;
+           }
+           if(m==n) 
+           System.out.println("Number is prime.");
+           System.out.println("Sum of prime factors: "+l);
        }
        else
        {
