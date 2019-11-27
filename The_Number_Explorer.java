@@ -11,6 +11,7 @@ public class The_Number_Explorer
         Factors.factor(a);
         Prime.pr(a);
         Prime.pr2(a);
+        Prime_Factorization.pfact(a);
         String st=(a%2==0)?"The number is even.":"The number is odd.";
         System.out.println(st);
     }

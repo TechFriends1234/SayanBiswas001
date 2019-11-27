@@ -2,65 +2,23 @@ public class Prime_Factorization
 {
     public static void pfact(int n)
     {
-        int i=0, k=1,c=0,count=1,j=0;
-        
-        while(k<=n)
-           {
-               i=2;
-               while(i<k)
-               {
-                   if(k%i==0)
-                   break;
-                   else
-                   i++;
-               }
-               if(i==k && n%i==0)
-               {
-                   j++;
-               }
-               k++;
-           }
-           System.out.println(j);//no of prime factors
-          i=0; k=1;c=0;count=1;
-        int a1[] = new int[j];
-        if(n>0)
+        int c=0;
+        for(int i=2;i<=n;i++)
         {
-            while(k<=n)
+            if(n%i==0)
             {
-                i=2;
-                while(i<k)
+                while(n%i==0)
                 {
-                    if(k%i==0)
-                    break;
-                    else
-                    i++;
-                }
-                if(i==k && n%i==0)
-                {
-                    System.out.println(i);
-                    a1[c]=i;
+                    n=n/i;
                     c++;
                 }
-                k++;
+                if(n!=1)
+                System.out.print(i+"^"+c+" X ");
+                else
+                System.out.print(i+"^"+c);
             }
-            
-            
-            
-            
-            for(int x=0;x<j;x++)
-            {
-                for(int y=x+1;y<j;y++)
-                for(int z=x+1;z<y;z++)
-                if(a1[x]!=a1[z])
-                if(a1[x]==a1[y])
-                count++;
-                System.out.print(a1[x]+"^"+count+" x ");
-                count=1;
-            }
-            System.out.println("");
-            
+            c=0;
         }
-        else
-        System.out.println("Prime factor of " + n + " are: 2 3 5 ...");
+        System.out.println("");
     }
 }
