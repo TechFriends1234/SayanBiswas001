@@ -4,8 +4,7 @@ public class Compound_Interest
 {
     public static void main()
     {
-        double ci,b;
-        //Enter 1 for compounding annually, 2 for compounding half-yearly and 3 for compounding quarterly.
+       double ci,b;
        Scanner sc=new Scanner(System.in);
        System.out.println("Enter the principal amount: ");
        float p= sc.nextFloat();
