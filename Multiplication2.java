@@ -20,16 +20,21 @@ public class Multiplication2//Declaring class
         h=(10*c+d)*e;
         h=h*10;
         String s="   ",s2=" ";
-        if(h>999) s=s+" ";
-        else if(h>99) s=s+"  ";
-        else s=s+"   ";
-        if(h>99) s2=s2+" ";
-        else s2=s2+"  ";
+        if(h>999)
+        s=s+" ";
+        else if(h>99)
+        s=s+"  ";
+        else
+        s=s+"   ";
+        if(h>99)
+        s2=s2+" ";
+        else
+        s2=s2+"  ";
         System.out.println(s + g);
-            System.out.println(" +" + s2 + h);
-            System.out.println("--------");
-            i=g+h;
-            System.out.println("   " + i);
+        System.out.println(" +" + s2 + h);
+        System.out.println("--------");
+        i=g+h;
+        System.out.println("   " + i);
         System.out.println("--------");
     }
 }
