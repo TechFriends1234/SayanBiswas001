@@ -23,6 +23,8 @@ public class Shopping_Mall
         List();
         else
         SignIn();
+        Calculate();
+        Bill();
     }
     public static void Intro()
     {
@@ -56,6 +58,7 @@ public class Shopping_Mall
         pass=name.charAt(0)+""+(int)(Math.random()*10)+name.charAt(1)+cntno/100000;
         System.out.println("Account created successfully. Your password is: ");
         System.out.print(pass);
+        data();
     }
     public static boolean SignIn()
     {
