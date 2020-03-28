@@ -2,21 +2,24 @@ import java.util.*;
 public class Shopping_Mall
 {
     static Scanner sc = new Scanner(System.in);
-    static String name,tname,email,pass,tpass;
-    static int cntno;
+    static String s1,name,tname,email,pass,tpass;
+    static int cntno,j;
+    static double total1,total2;
+    static final double dis1=25, dis2=20;
     static int[] sl = new int[30];
     static int[] qn = new int[30];
     static int[] rate = {100, 80, 60, 40, 15, 60, 95, 30, 6, 15, 20, 25, 60, 20, 150, 160, 180, 160, 40, 25, 70, 50, 60, 40, 65, 100, 70, 130, 40, 125};
-    public static void main()
+    static String[] item = {"Meat", "Fish", "Pasta", "Rice", "Bread", "Flour", "Oil", "Milk", "Egg", "Butter", "Cheese", "Yogurt", "Onion", "Potato", "Garlic",
+    "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
+    static boolean a=false;
+    public static void main(String args[])
     {
         System.out.println("Welcome to Sayan's Online Shopping Mall!");
-        String s1;
-        boolean a=false;
         while(a==false)
         {
             System.out.println("Are you 'NEW' or 'EXISTING' customer? ");
             s1=sc.next();
-            if(s1==(String)"NEW")
+            if(s1=="NEW")
             {
                 a=true;
                 SignUp();
@@ -39,7 +42,7 @@ public class Shopping_Mall
         cntno=sc.nextInt();
         System.out.println("Enter your email: ");
         email=sc.next();
-        pass=name.charAt(0)+(int)(Math.random()*10)+name.charAt(1)+cntno/100000;
+        pass=name.charAt(0)+""+(int)(Math.random()*10)+name.charAt(1)+cntno/100000;
         System.out.println("Account created successfully. Your password is: ");
         System.out.print(pass);
     }
@@ -65,23 +68,37 @@ public class Shopping_Mall
         System.out.println("16. Ginger-₹160/kg\t17. Tomato-₹180/kg\t18. Capsicum-₹160/kg\t19. Pumpkin-₹40/kg\t20. Sugar-₹25/kg ");
         System.out.println("21. Apple-₹70/kg\t\t22. Banana-₹50/kg\t23. Guava-₹60/kg\t\t24. Cucumber-₹40/kg\t25. Orange-₹65/kg ");
         System.out.println("26. Pomegranate-₹100/kg\t27. Grapes-₹70/kg\t28. Kiwi-₹130/kg\t\t29. Vinegar-₹40/bottle\t30. Honey-₹125/unit ");
-        for(int i=0;i<=sl.length;i++)
-        {
+        int i=0;
+        do{
+            if(sc.nextInt()==0)
+            break;
             sl[i]=sc.nextInt();
             qn[i]=sc.nextInt();
-        }
+            i++;
+        }while(i<=sl.length);
     }
     public static void Calculate()
     {
-        
+        for(j=0;j<sl.length;j++)
+        {
+            total1+=rate[sl[j]]*qn[j];
+        }
+        if(s1=="NEW")
+        total2=total1*(100-dis1)/100;
+        else
+        total2=total1*(100-dis2)/100;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public static void Bill()
+    {
+        System.out.println("--------------Bill--------------");
+        System.out.println("Sl.No.\tItem\t\tRate\tQuantity\tTotal");
+        for(int k=1;k<=j;k++)
+        {
+            System.out.println(k+"\t"+item[sl[k-1]]+"\t\t"+rate[sl[k-1]]+"\t"+qn[k-1]+"\t\t"+(rate[sl[k-1]])*(rate[sl[k-1]]));
+        }
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("Total purchased amount: "+total1);
+        System.out.println("Discount for "+s1+" customer: "+s1=="NEW"?dis1:dis2+"%");
+        System.out.println("Net amount: "+total2);
+    }
 }
