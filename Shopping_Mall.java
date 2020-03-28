@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 public class Shopping_Mall
 {
@@ -12,24 +13,33 @@ public class Shopping_Mall
     static String[] item = {"Meat", "Fish", "Pasta", "Rice", "Bread", "Flour", "Oil", "Milk", "Egg", "Butter", "Cheese", "Yogurt", "Onion", "Potato", "Garlic",
     "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
     static boolean a=false;
+    static Properties properties = new Properties();
     public static void main(String args[])
+    {
+        Intro();
+        if(s1.equals("NEW"))
+        List();
+        else if(SignIn())
+        List();
+        else
+        SignIn();
+    }
+    public static void Intro()
     {
         System.out.println("Welcome to Sayan's Online Shopping Mall!");
         while(a==false)
         {
             System.out.println("Are you 'NEW' or 'EXISTING' customer? ");
             s1=sc.next();
-            if(s1=="NEW")
+            if(s1.equals("NEW"))
             {
                 a=true;
                 SignUp();
-                
             }
-            if(s1=="EXISTING")
+            if(s1.equals("EXISTING"))
             {
                 a=true;
                 SignIn();
-                
             }
         }
     }
@@ -37,8 +47,9 @@ public class Shopping_Mall
     {
         System.out.println("Create your account for free!");
         System.out.println("Enter your name: ");
-        name=sc.next();
+        name=sc.nextLine();
         System.out.println("Enter your contact number: ");
+        sc.reset();
         cntno=sc.nextInt();
         System.out.println("Enter your email: ");
         email=sc.next();
@@ -46,17 +57,37 @@ public class Shopping_Mall
         System.out.println("Account created successfully. Your password is: ");
         System.out.print(pass);
     }
-    public static void SignIn()
+    public static boolean SignIn()
     {
         System.out.println("Welcome to SignIn wizard!");
         System.out.println("Enter your name: ");
         tname=sc.next();
         System.out.println("Enter your password: ");
         tpass=sc.next();
+        if(tname.equals(properties.getProperty("Name")) && tpass.equals(properties.getProperty("Password")))
+        return true;
+        else 
+        return false;
     }
     public static void data()
     {
-        
+        try 
+        {
+            
+            properties.setProperty("Name", name);
+            properties.setProperty("Password", pass);
+            File file = new File("Shopping_Mall_Data.properties");
+            FileOutputStream fileOut = new FileOutputStream(file);
+            properties.store(fileOut, "Accounts");
+            fileOut.close();
+        }
+        catch (FileNotFoundException e) 
+        {
+            e.printStackTrace();
+        } catch (IOException e) 
+        {
+            e.printStackTrace();
+        }
     }
     public static void List()
     {
