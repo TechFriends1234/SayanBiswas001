@@ -9,8 +9,8 @@ public class Shopping_Mall
     static double total1,total2;
     static final double dis1=25, dis2=20;
     static int[] sl = new int[30];
-    static int[] qn = new int[30];
-    static int[] rate = {100, 80, 60, 40, 15, 60, 95, 30, 6, 15, 20, 25, 60, 20, 150, 160, 180, 160, 40, 25, 70, 50, 60, 40, 65, 100, 70, 130, 40, 125};
+    static double[] qn = new double[30];
+    static double[] rate = {100, 80, 60, 40, 15, 60, 95, 30, 6, 15, 20, 25, 60, 20, 150, 160, 180, 160, 40, 25, 70, 50, 60, 40, 65, 100, 70, 130, 40, 125};
     static String[] item = {"Meat", "Fish", "Pasta", "Rice", "Bread", "Flour", "Oil", "Milk", "Egg", "Butter", "Cheese", "Yogurt", "Onion", "Potato", "Garlic",
     "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
     static boolean a=false;
@@ -50,7 +50,7 @@ public class Shopping_Mall
     {
         System.out.println("Create your account for free!");
         System.out.println("Enter your name: ");
-        name=sc.nextLine();
+        name=sc.next();
         System.out.println("Enter your contact number: ");
         cntno=sc.nextLong();
         System.out.println("Enter your email: ");
@@ -76,7 +76,6 @@ public class Shopping_Mall
     {
         try 
         {
-            
             properties.setProperty("Name", name);
             properties.setProperty("Password", pass);
             File file = new File("Shopping_Mall_Data.properties");
@@ -104,10 +103,10 @@ public class Shopping_Mall
         System.out.println("26. Pomegranate-₹100/kg\t27. Grapes-₹70/kg\t28. Kiwi-₹130/kg\t\t29. Vinegar-₹40/bottle\t30. Honey-₹125/unit ");
         int i=0;
         do{
-            if(sc.nextInt()==0)
+            if(sc.nextDouble()==0.0)
             break;
             sl[i]=sc.nextInt();
-            qn[i]=sc.nextInt();
+            qn[i]=sc.nextDouble();
             i++;
         }while(i<=sl.length);
     }
