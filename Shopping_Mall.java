@@ -105,12 +105,10 @@ public class Shopping_Mall
         System.out.println("26. Pomegranate-₹100/kg\t27. Grapes-₹70/kg\t28. Kiwi-₹130/kg\t\t29. Vinegar-₹40/bottle\t30. Honey-₹125/unit ");
         int i=0;
         do{
-            if(sc.nextInt()==0)
-            break;
             sl[i]=sc.nextInt();
             qn[i]=sc.nextInt();
             i++;
-        }while(i<=sl.length);
+        }while(i<=sl.length && sc.nextInt()==0);
     }
     public static void Calculate()
     {
@@ -131,7 +129,7 @@ public class Shopping_Mall
         System.out.println("Sl.No.\tItem\t\tRate\tQuantity\tTotal");
         for(int k=1;k<=j;k++)
         {
-            System.out.println(k+"\t"+item[sl[k-1]]+"\t\t"+rate[sl[k-1]]+"\t"+qn[k-1]+"\t\t"+(rate[sl[k-1]])*(rate[sl[k-1]]));
+            System.out.println(k+"\t"+item[sl[k-1]]+"\t\t"+rate[sl[k-1]]+"\t"+qn[k-1]+"\t\t"+(rate[sl[k-1]])*(qn[k-1]));
         }
         System.out.println("-------------------------------------------------------------");
         System.out.println("Total purchased amount: "+total1);
