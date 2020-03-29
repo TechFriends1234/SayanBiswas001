@@ -15,6 +15,8 @@ public class Shopping_Mall
     "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
     static boolean a=false;
     static Properties properties = new Properties();
+    static char Name0;
+    static char Name1;
     
     public static void main(String args[])
     {
@@ -35,12 +37,12 @@ public class Shopping_Mall
         {
             System.out.println("Are you 'NEW' or 'EXISTING' customer? ");
             s1=sc.next();
-            if(s1.equals("NEW"))
+            if(s1.equalsIgnoreCase("NEW"))
             {
                 a=true;
                 SignUp();
             }
-            if(s1.equals("EXISTING"))
+            if(s1.equalsIgnoreCase("EXISTING"))
             {
                 a=true;
                 SignIn();
