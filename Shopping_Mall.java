@@ -15,8 +15,6 @@ public class Shopping_Mall
     "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
     static boolean a=false;
     static Properties properties = new Properties();
-    static char Name0;
-    static char Name1;
     
     public static void main(String args[])
     {
