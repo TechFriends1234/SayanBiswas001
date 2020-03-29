@@ -117,6 +117,8 @@ public class Shopping_Mall
         for(j=0;j<sl.length;j++)
         {
             total1+=rate[sl[j]]*qn[j];
+            if(sl[j]==0)
+            break;
         }
         if(s1=="NEW")
         total2=total1*(100-dis1)/100;
