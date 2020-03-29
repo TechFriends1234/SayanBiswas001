@@ -51,7 +51,6 @@ public class Shopping_Mall
         System.out.println("Enter your name: ");
         name=sc.nextLine();
         System.out.println("Enter your contact number: ");
-        sc.reset();
         cntno=sc.nextInt();
         System.out.println("Enter your email: ");
         email=sc.next();
