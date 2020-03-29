@@ -1,5 +1,5 @@
-import java.io. * ;
-import java.util. * ;
+import java.io.*;
+import java.util.*;
 public class Shopping_Mall {
 	static Scanner sc = new Scanner(System. in );
 	static String s1,
