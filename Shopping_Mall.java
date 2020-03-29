@@ -4,8 +4,8 @@ public class Shopping_Mall
 {
     static Scanner sc = new Scanner(System.in);
     static String s1,name,tname,email,pass,tpass;
-    static long cntno;
     static int j;
+    static long cntno;
     static double total1,total2;
     static final double dis1=25, dis2=20;
     static int[] sl = new int[30];
@@ -15,6 +15,7 @@ public class Shopping_Mall
     "Ginger", "Tomato", "Capsicum", "Pumpkin", "Sugar", "Apple", "Banana", "Guava", "Cucumber", "Orange", "Pomegranate", "Grapes", "Kiwi", "Vinegar", "Honey"};
     static boolean a=false;
     static Properties properties = new Properties();
+    
     public static void main(String args[])
     {
         Intro();
@@ -50,14 +51,15 @@ public class Shopping_Mall
     {
         System.out.println("Create your account for free!");
         System.out.println("Enter your name: ");
-        name=sc.nextLine();
+        name=sc.next();
+        sc.nextLine();
         System.out.println("Enter your contact number: ");
         cntno=sc.nextLong();
         System.out.println("Enter your email: ");
         email=sc.next();
-        pass=name.charAt(0)+""+(int)(Math.random()*10)+name.charAt(1)+cntno/100000;
+        pass= name.charAt(0)+""+(int)(Math.random()*10)+""+ name.charAt(1)+""+(cntno/100000);
         System.out.println("Account created successfully. Your password is: ");
-        System.out.print(pass);
+        System.out.print(pass + "\n\n");
         data();
     }
     public static boolean SignIn()
