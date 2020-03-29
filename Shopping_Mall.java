@@ -22,7 +22,7 @@ public class Shopping_Mall
     public static void main(String args[])
     {
         Intro();
-        if(s1.equals("NEW"))
+        if(s1.equalsIgnoreCase("NEW"))
         List();
         else if(SignIn())
         List();
@@ -141,4 +141,3 @@ public class Shopping_Mall
         System.out.println("Net amount: "+total2);
     }
 }
-
