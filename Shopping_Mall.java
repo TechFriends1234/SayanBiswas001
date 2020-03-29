@@ -73,25 +73,34 @@ public class Shopping_Mall
         else 
         return false;
     }
-    public static void data()
-    {
-        try 
-        {
-            
-            properties.setProperty("Name", name);
-            properties.setProperty("Password", pass);
-            File file = new File("Shopping_Mall_Data.properties");
-            FileOutputStream fileOut = new FileOutputStream(file);
-            properties.store(fileOut, "Accounts");
-            fileOut.close();
-        }
-        catch (FileNotFoundException e) 
-        {
+public static void data() {
+         /*
+             * try {
+             *     properties.setProperty("Name", name);
+             *     properties.setProperty("Password", pass);
+             *     File file = new File("Shopping_Mall_Data.properties");
+             *     FileOutputStream fileOut = new FileOutputStream(file);
+             *     properties.store(fileOut, "Accounts");
+             *     fileOut.close();
+             *  }
+             *  catch(FileNotFoundException e) {
+             *      e.printStackTrace();
+             *  } catch(IOException e) {
+             *      e.printStackTrace();
+             *  }
+         */
+       
+         try(FileWriter fw = new FileWriter("Shopping_Mall_Data.properties", true);
+         BufferedWriter bw = new BufferedWriter(fw);
+         PrintWriter out = new PrintWriter(bw))
+         {
+             properties.setProperty("Name", name);
+             properties.setProperty("Password", pass);
+             properties.store(out, "Accounts");
+            //more code
+         } catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException e) 
-        {
-            e.printStackTrace();
-        }
+         }
     }
     public static void List()
     {
