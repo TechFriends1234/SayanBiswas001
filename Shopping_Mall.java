@@ -4,7 +4,8 @@ public class Shopping_Mall
 {
     static Scanner sc = new Scanner(System.in);
     static String s1,name,tname,email,pass,tpass;
-    static int cntno,j;
+    static long cntno;
+    static int j;
     static double total1,total2;
     static final double dis1=25, dis2=20;
     static int[] sl = new int[30];
@@ -51,7 +52,7 @@ public class Shopping_Mall
         System.out.println("Enter your name: ");
         name=sc.nextLine();
         System.out.println("Enter your contact number: ");
-        cntno=sc.nextInt();
+        cntno=sc.nextLong();
         System.out.println("Enter your email: ");
         email=sc.next();
         pass=name.charAt(0)+""+(int)(Math.random()*10)+name.charAt(1)+cntno/100000;
