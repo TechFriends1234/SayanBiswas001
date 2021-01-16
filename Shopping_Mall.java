@@ -73,23 +73,8 @@ public class Shopping_Mall
         else 
         return false;
     }
-public static void data() {
-         /*
-             * try {
-             *     properties.setProperty("Name", name);
-             *     properties.setProperty("Password", pass);
-             *     File file = new File("Shopping_Mall_Data.properties");
-             *     FileOutputStream fileOut = new FileOutputStream(file);
-             *     properties.store(fileOut, "Accounts");
-             *     fileOut.close();
-             *  }
-             *  catch(FileNotFoundException e) {
-             *      e.printStackTrace();
-             *  } catch(IOException e) {
-             *      e.printStackTrace();
-             *  }
-         */
-       
+    public static void data() 
+    {
          try(FileWriter fw = new FileWriter("Shopping_Mall_Data.properties", true);
          BufferedWriter bw = new BufferedWriter(fw);
          PrintWriter out = new PrintWriter(bw))
@@ -113,11 +98,12 @@ public static void data() {
         System.out.println("21. Apple-₹70/kg\t\t22. Banana-₹50/kg\t23. Guava-₹60/kg\t\t24. Cucumber-₹40/kg\t25. Orange-₹65/kg ");
         System.out.println("26. Pomegranate-₹100/kg\t27. Grapes-₹70/kg\t28. Kiwi-₹130/kg\t\t29. Vinegar-₹40/bottle\t30. Honey-₹125/unit ");
         int i=0;
-        do{
+        while(i<sl.length && sc.nextInt()!=0)
+        {
             sl[i]=sc.nextInt();
             qn[i]=sc.nextInt();
             i++;
-        }while(i<=sl.length && sc.nextInt()==0);
+        }
     }
     public static void Calculate()
     {

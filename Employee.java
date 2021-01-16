@@ -1,16 +1,36 @@
-public class Employee
+class employee
 {
-    public static void empno(double basic, double hra, double da)
+    int pan;
+    String name;
+    double taxincome,tax;
+    void input(int p,String n,double income)
     {
-        Employee.basicpay(basic,hra,da);
+        pan=p;
+        name=n;
+        taxincome=income;
     }
-    public static void basicpay(double basic, double hra, double da)
+    void calc()
     {
-        double gross_pay=basic+basic*hra/100+basic*da/100;
-        double net_pay=gross_pay-15*gross_pay/100;
-        System.out.println("Payslip");
-        System.out.println("Basic: "+basic);
-        System.out.println("Gross pay: "+gross_pay);
-        System.out.println("Net pay: "+net_pay);        
+        if(taxincome<=25000)
+        {
+            tax=0.0;
+        }
+        else if(taxincome<=500000)
+        {
+            tax=1*(taxincome-250000);
+        }
+        else if(taxincome<=1000000)
+        {
+            tax=2*(taxincome-500000)+5000;
+        }
+        else
+        {
+            tax=3*(taxincome-1000000)+25000;
+        }
+    }
+    void display()
+    {
+        System.out.println("Pan Number\tName\tTax-income\tTax");
+        System.out.println(pan+"\t"+name+"\t"+taxincome+"\t"+tax);
     }
 }

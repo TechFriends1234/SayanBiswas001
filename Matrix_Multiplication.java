@@ -14,9 +14,11 @@ public class Matrix_Multiplication
         int i,j,k;
         System.out.println("Enter the values for first "+r+"x"+c+" matrix: ");
         for(i=0;i<r;i++)
+        {
         for(j=0;j<c;j++)
         mat1[i][j]=sc.nextInt();
         System.out.println("Enter the values for second "+r+"x"+c+" matrix: ");
+    }
         for(i=0;i<r;i++)
         for(j=0;j<c;j++)
         mat2[i][j]=sc.nextInt();
